@@ -30,3 +30,22 @@
     appearance: none !important;
     border-radius: 0;
   }
+
+#root{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+.card {
+  flex-grow: 1;
+  flex-basis: 25%;
+  border: 2px dotted black;
+  text-align: center;
+  background-color: snow;
+  padding: 15px;
+}
+
