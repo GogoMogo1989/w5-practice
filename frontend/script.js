@@ -7,13 +7,13 @@ function loadEvent() {
     let rootElement = document.getElementById("root")
 
     // let card = function(movieReceived){
-    //     return `
+    // return `
     //     <div class="card">
-    //         <h2>${movieReceived.title}</h2>
-    //         <div class="time">${movieReceived.year}</div>
-    //         <div class="rate">${movieReceived.rate}</div>
-    //     </div>
-    // `}
+    //          <h2>${movieReceived.title}</h2>
+    //          <div class="time">${movieReceived.year}</div>
+    //          <div class="rate">${movieReceived.rate}</div>
+    //      </div>
+    //  `}
 
     let card2 = function(title, year, rate){
         return `
@@ -29,14 +29,15 @@ function loadEvent() {
     // }
 
     let anotherFavouriteMovie = {
-        "title": "The Last Scout Boy",
-        "year": 1991,
-        "rate": 7.0,
+    "title": "The Last Scout Boy",
+    "year": 1991,
+    "rate": 7.0,
     }
-rootElement.insertAdjacentHTML("beforeend", card2(anotherFavouriteMovie.title, anotherFavouriteMovie.year, anotherFavouriteMovie.rate));
+
+    rootElement.insertAdjacentHTML("beforeend", card2(anotherFavouriteMovie.title, anotherFavouriteMovie.year, anotherFavouriteMovie.rate));
 
     for (const movieSend of movies) {
-        rootElement.insertAdjacentHTML("beforeend", card2(anotherFavouriteMovie.title, anotherFavouriteMovie.year, anotherFavouriteMovie.rate));
+        rootElement.insertAdjacentHTML("beforeend",  card2(anotherFavouriteMovie.title, anotherFavouriteMovie.year, anotherFavouriteMovie.rate));
     }
     console.log(movies)
 }
