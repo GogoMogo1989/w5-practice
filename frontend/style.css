@@ -32,20 +32,46 @@
   }
 
 #root{
-  display: flex;
+  display: grid;
+  grid-template-rows: 500px;
+  grid-template-columns: auto auto auto;
+  grid-template-areas: 
+    "head head head"
+    "main main main";
+  width: 100%;
+  max-width: 1200px;
+  justify-content: center;
+  align-content: center;
+  /* display: flex;
   flex-wrap: wrap;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  gap: 10px;
+  gap: 10px; */
 }
 
+
+.top {
+  background-color: aqua;
+  }
+
+#root > .top {
+  grid-area: head;
+}
+
+#root > .main {
+  grid-area: main;
+}
+
+
 .card {
-  flex-grow: 1;
-  flex-basis: 25%;
+  grid-template-rows: auto;
   border: 2px dotted black;
+  /* flex-grow: 1;
+  flex-basis: 25%;
+  
   text-align: center;
   background-color: snow;
-  padding: 15px;
+  padding: 15px; */
 }
 
