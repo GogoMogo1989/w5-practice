@@ -1,77 +1,94 @@
 * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: none;
-    box-sizing: border-box;
-    background: transparent;
-    font-family: inherit;
-  }
-  a{
-    text-decoration: none;
-  }
-  a img {
-    border: none;
-  }
-  
-  button,
-  a {
-    cursor: pointer;
-    color: inherit;
-  }
-  
-  textarea {
-    resize: none;
-  }
-  
-  button,
-  textarea,
-  select {
-    appearance: none !important;
-    border-radius: 0;
-  }
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+  background: transparent;
+  font-family: inherit;
+}
+a{
+  text-decoration: none;
+}
+a img {
+  border: none;
+}
+
+button,
+a {
+  cursor: pointer;
+  color: inherit;
+}
+
+textarea {
+  resize: none;
+}
+
+button,
+textarea,
+select {
+  appearance: none !important;
+  border-radius: 0;
+}
 
 #root{
   display: grid;
-  grid-template-rows: 500px;
-  grid-template-columns: auto auto auto;
+  grid-template-rows: auto; 
+  grid-template-columns: 30% 30% 30%;
+  grid-template: 100px / 30% 30% 30% ; 
+  grid-template: fit-content(100px) / fit-content(40%);  
   grid-template-areas: 
-    "head head head"
-    "main main main";
+    "top top img"
+    "main main main"; 
   width: 100%;
   max-width: 1200px;
   justify-content: center;
-  align-content: center;
-  /* display: flex;
+  padding-left: 20px
+  
+
+/*    display: flex;
   flex-wrap: wrap;
-  width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
-  gap: 10px; */
+  gap: 10px;  */
 }
 
 
 .top {
-  background-color: aqua;
+  border: 1px solid black;
+  background-color: rgb(245, 224, 166);
+  text-align: center;
+  justify-content: center;
+  padding-top: 50px;
+  grid-area: top;
   }
 
-#root > .top {
-  grid-area: head;
-}
+/* #root >  */
+/* .top {
+} */
 
 #root > .main {
   grid-area: main;
 }
 
+#popcorn {
+  grid-area: img;
+  z-index: 100;
+  height: 200px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(245, 224, 166);
+}
 
 .card {
-  grid-template-rows: auto;
-  border: 2px dotted black;
-  /* flex-grow: 1;
-  flex-basis: 25%;
-  
+  border: 1px solid black;
   text-align: center;
-  background-color: snow;
-  padding: 15px; */
+  background-color: rgb(250, 244, 244);
+  padding: 15px;
+
+/*     flex-grow: 1;
+  flex-basis: 25%;
+  grid-template-rows: auto;  */
+
 }
 
